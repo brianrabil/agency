@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { config } from "@/lib/config";
+import type React from "react";
+import "@/app/globals.css";
+import { Container } from "@/components/container";
+import { Logo } from "@/components/logo";
+import { Nav, NavLink } from "@/components/nav";
+import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { ArrowUpRightIcon } from "lucide-react";
+import Link from "next/link";
+// import { Analytics } from "@vercel/analytics/react";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Footer } from "@/components/footer";
+
 import "./globals.css";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +43,35 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+<header className="flex items-center h-[96px] border-b">
+					<Container className="flex justify-between items-center">
+						{/* Left section: Logo */}
+						<div className="text-2xl font-bold text-foreground">
+							<Logo />
+						</div>
+
+						{/* Center section: Navigation */}
+						<Nav>
+							{config.nav.map((item) => (
+								<NavLink key={item.href.toString()} href={item.href}>
+									{item.name}
+								</NavLink>
+							))}
+						</Nav>
+
+						{/* Right section: Call to Action */}
+						<Button type="button" variant="outline" asChild>
+							<Link href="/contact">Book a call</Link>
+						</Button>
+					</Container>
+				</header>
+        <main>
+          {children}
+        </main>
+        {/* <Toaster /> */}
+				<Footer />
+				{/* <Analytics /> */}
+				{/* <SpeedInsights /> */}
       </body>
     </html>
   );
