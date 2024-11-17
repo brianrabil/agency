@@ -1,32 +1,24 @@
 {
-  "name": "next-forge",
-  "version": "2.15.10",
-  "bin": {
-    "next-forge": "./scripts/init.js"
-  },
-  "files": [
-    "scripts/init.js"
-  ],
+  "name": "agency",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "analyze": "turbo analyze",
-    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
-    "migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "next": "15.0.3"
   },
   "devDependencies": {
-    "@auto-it/all-contributors": "^11.3.0",
-    "@auto-it/first-time-contributor": "^11.3.0",
-    "@biomejs/biome": "1.9.4",
-    "@repo/typescript-config": "workspace:*",
-    "turbo": "^2.3.0",
-    "typescript": "^5.6.3",
-    "ultracite": "^4.1.6"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "pnpm@9.13.2"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
 }

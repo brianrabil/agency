@@ -7,7 +7,8 @@
 	"runArgs": ["--name", "agency-devcontainer"],
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {},
-		"./local-features/turbo": {}
+		"./local-features/next-forge": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

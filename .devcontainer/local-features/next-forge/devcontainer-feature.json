@@ -1,0 +1,9 @@
+{
+	"id": "install-next-forge",
+	"name": "Install Next Forge",
+	"version": "0.0.1",
+	"dependsOn": {
+		"node": "*"
+	},
+	"options": {}
+}
