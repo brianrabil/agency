@@ -8,7 +8,9 @@ interface TypographyProps {
 
 export function TypographyD2({ children }: TypographyProps) {
 	return (
-		<h2 className="text-3xl font-bold mb-2 tracking-tight text-gray-900 sm:text-4xl">{children}</h2>
+		<h2 className="text-3xl font-bold mb-2 tracking-tight text-gray-900 sm:text-4xl">
+			{children}
+		</h2>
 	);
 }
 
@@ -30,14 +32,23 @@ export function TypographyH2({ children }: TypographyProps) {
 
 export function TypographyH3({ children, className }: TypographyProps) {
 	return (
-		<h3 className={cn("scroll-m-20 text-2xl font-semibold tracking-tight", className)}>
+		<h3
+			className={cn(
+				"scroll-m-20 text-2xl font-semibold tracking-tight",
+				className,
+			)}
+		>
 			{children}
 		</h3>
 	);
 }
 
 export function TypographyH4({ children }: TypographyProps) {
-	return <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">{children}</h4>;
+	return (
+		<h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+			{children}
+		</h4>
+	);
 }
 
 export function TypographyP({ children }: TypographyProps) {
@@ -61,7 +72,11 @@ export function TypographyInlineCode({ children }: TypographyProps) {
 }
 
 export function LeadText({ children, className }: TypographyProps) {
-	return <p className={cn("text-xl leading-8 text-muted-foreground", className)}>{children}</p>;
+	return (
+		<p className={cn("text-xl leading-8 text-muted-foreground", className)}>
+			{children}
+		</p>
+	);
 }
 
 export function HighlightText({

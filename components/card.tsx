@@ -1,7 +1,7 @@
 import { Card as BaseCard } from "@/components/ui/card";
 import { MagicCard as BaseMagicCard } from "@/components/ui/magic-card";
-import type React from "react";
 import { cn } from "@/lib/utils";
+import type React from "react";
 
 export function Card({
 	children,
@@ -15,7 +15,9 @@ export function Card({
 			gradientOpacity={0.1}
 			gradientSize={200}
 		>
-			<BaseCard className={cn("bg-transparent border-none w-full", innerClassName)}>
+			<BaseCard
+				className={cn("bg-transparent border-none w-full", innerClassName)}
+			>
 				{children}
 			</BaseCard>
 		</BaseMagicCard>

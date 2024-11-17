@@ -1,14 +1,14 @@
 "use client";
 
-import { config } from "@/lib/config";
-import type React from "react";
 import { Container } from "@/components/container";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRightIcon } from "lucide-react";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import { config } from "@/lib/config";
+import { ArrowUpRightIcon } from "lucide-react";
 import { MailIcon } from "lucide-react";
+import Link from "next/link";
+import type React from "react";
 import { SocialIcon } from "react-social-icons";
 
 export function Footer() {
@@ -22,8 +22,8 @@ export function Footer() {
 								Subscribe to my newsletter
 							</h3>
 							<p className="mt-4 text-center md:text-left text-primary-foreground text-lg">
-								Join 10,000+ designers and get creative site breakdowns, design musings and tips
-								every Monday.
+								Join 10,000+ designers and get creative site breakdowns, design
+								musings and tips every Monday.
 							</p>
 						</div>
 						<div className="w-full md:w-1/2 flex items-center">
@@ -65,8 +65,8 @@ export function Footer() {
 						{/* Contact and Social Links */}
 						<div className="max-w-md flex flex-col gap-y-8 h-full md:ml-auto">
 							<p className="text-background text-lg">
-								Iced pumpkin ristretto irish trifecta robusta trade froth affogato barista con
-								barista cappuccino filter roast.
+								Iced pumpkin ristretto irish trifecta robusta trade froth
+								affogato barista con barista cappuccino filter roast.
 							</p>
 							<div className="grid grid-cols-2 md:grid-cols-3 gap-3">
 								<Button
@@ -168,7 +168,11 @@ export function Footer() {
 					<div className="mt-12 md:mt-24 border-t border-border/10 pt-6 md:pt-8 lg:pt-10 flex flex-col md:flex-row justify-between items-center">
 						<nav className="flex flex-row gap-x-6">
 							{config.nav.map((item) => (
-								<Link key={item.name} href={item.href} className="text-background">
+								<Link
+									key={item.name}
+									href={item.href}
+									className="text-background"
+								>
 									{item.name}
 								</Link>
 							))}

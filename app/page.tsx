@@ -1,10 +1,16 @@
 import { Container } from "@/components/container";
 import { ProjectCard } from "@/components/project-card";
 import { Range } from "@/components/range";
+import { HighlightText } from "@/components/typography";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+	Card,
+	CardContent,
+	CardFooter,
+	CardHeader,
+} from "@/components/ui/card";
 import {
 	Carousel,
 	CarouselContent,
@@ -30,7 +36,6 @@ import type { Viewport } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
-import { HighlightText } from "@/components/typography";
 
 export const viewport: Viewport = {
 	themeColor: "black",
@@ -52,20 +57,28 @@ export default async function App() {
 					{/* Text Section */}
 					<div className="flex flex-col gap-y-12 md:gap-y-8 my-auto z-10">
 						<h1 className="text-center md:text-left text-5xl lg:text-6xl leading-tight font-extrabold text-foreground">
-							<HighlightText>Helping</HighlightText> businesses turn their ideas into reality
+							<HighlightText>Helping</HighlightText> businesses turn their ideas
+							into reality
 						</h1>
 
 						<p className="text-center md:text-left text-xl text-foreground leading-normal">
-							I'm a passionate developer, entrepreneur, and general technology enthusiast living in
-							Dallas, TX. I've worked with hundreds of startups to help them develop their ideas
-							into profitable businesses.
+							I'm a passionate developer, entrepreneur, and general technology
+							enthusiast living in Dallas, TX. I've worked with hundreds of
+							startups to help them develop their ideas into profitable
+							businesses.
 						</p>
 
 						<div className="flex flex-col items-center md:flex-row md:justify-start gap-x-8 gap-y-12">
 							<RainbowButton>Book a call with me</RainbowButton>
 							<div className="flex gap-x-4">
 								{/* Social Media Icons */}
-								<Button asChild type="button" variant="outline" size="icon" className="h-10 w-10">
+								<Button
+									asChild
+									type="button"
+									variant="outline"
+									size="icon"
+									className="h-10 w-10"
+								>
 									<SocialIcon
 										fgColor="currentColor"
 										bgColor="transparent"
@@ -73,7 +86,13 @@ export default async function App() {
 										url={config.social.x.href}
 									/>
 								</Button>
-								<Button type="button" variant="outline" size="icon" asChild className="h-10 w-10">
+								<Button
+									type="button"
+									variant="outline"
+									size="icon"
+									asChild
+									className="h-10 w-10"
+								>
 									<SocialIcon
 										fgColor="currentColor"
 										bgColor="transparent"
@@ -107,14 +126,16 @@ export default async function App() {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-12">
 						<div className="relative md:col-span-1">
 							<h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5 md:mb-0">
-								I'm your <HighlightText>all-in-one</HighlightText> project solution
+								I'm your <HighlightText>all-in-one</HighlightText> project
+								solution
 							</h2>
 						</div>
 
 						<div className="md:col-span-1 lg:col-span-2 justify-self-end">
 							<p className="text-foreground text-xl leading-normal max-w-2xl">
-								Experience the advantage of an all-inclusive project solution, where excellence,
-								speed, and responsiveness converge to ensure the highest quality outcome.
+								Experience the advantage of an all-inclusive project solution,
+								where excellence, speed, and responsiveness converge to ensure
+								the highest quality outcome.
 							</p>
 						</div>
 
@@ -131,8 +152,8 @@ export default async function App() {
 											Excellence
 										</h3>
 										<p className="text-foreground text-lg font-normal mt-2 leading-normal">
-											I take pride in doing things well. All client work is done with the best
-											quality possible.
+											I take pride in doing things well. All client work is done
+											with the best quality possible.
 										</p>
 									</div>
 								</div>
@@ -142,10 +163,12 @@ export default async function App() {
 										<span className="text-2xl">⏱</span>
 									</div>
 									<div>
-										<h3 className="text-xl font-semibold text-foreground leading-normal">Speed</h3>
+										<h3 className="text-xl font-semibold text-foreground leading-normal">
+											Speed
+										</h3>
 										<p className="text-foreground text-lg font-normal mt-2 leading-normal">
-											I like to work hard and fast. I know how important deadlines are to my
-											clients.
+											I like to work hard and fast. I know how important
+											deadlines are to my clients.
 										</p>
 									</div>
 								</div>
@@ -159,7 +182,8 @@ export default async function App() {
 											Responsiveness
 										</h3>
 										<p className="text-foreground text-lg font-normal mt-2 leading-normal">
-											You can rely on me to be responsive and clear whenever we work together.
+											You can rely on me to be responsive and clear whenever we
+											work together.
 										</p>
 									</div>
 								</div>
@@ -207,7 +231,12 @@ export default async function App() {
 									key={tool.name}
 									className="flex-shrink-0 w-20 h-20 p-4 rounded-full  flex justify-center items-center  transition m-2"
 								>
-									<Image src={tool.logo} alt={`${tool.name} logo`} width={24} height={24} />
+									<Image
+										src={tool.logo}
+										alt={`${tool.name} logo`}
+										width={24}
+										height={24}
+									/>
 								</div>
 							))}
 						</div>
@@ -222,8 +251,9 @@ export default async function App() {
 							Check out my latest work
 						</h2>
 						<p className="mt-5 text-lg md:text-xl text-foreground mx-auto max-w-md leading-normal">
-							My goal is to create effective digital experiences that make people's lives easier and
-							better. I hope my work is a reflection of this.
+							My goal is to create effective digital experiences that make
+							people's lives easier and better. I hope my work is a reflection
+							of this.
 						</p>
 					</div>
 					<div className="grid grid-cols-1 gap-8">
@@ -259,8 +289,8 @@ export default async function App() {
 						</div>
 						<div className="max-w-md w-auto ml-auto">
 							<p className="text-foreground text-lg leading-normal m-0">
-								Iced pumpkin ristretto irish trifecta robusta trade froth affogato barista con
-								barista cappuccino filter roast.
+								Iced pumpkin ristretto irish trifecta robusta trade froth
+								affogato barista con barista cappuccino filter roast.
 							</p>
 						</div>
 						<div className="w-full lg:max-w-2xl self-end">
@@ -284,7 +314,10 @@ export default async function App() {
 						<CarouselNext />
 						<CarouselContent className="ml-1 divide-x">
 							{config.testimonials.map((testimonial, index) => (
-								<CarouselItem key={testimonial.name} className="md:basis-1/2 lg:basis-1/3 pl-0">
+								<CarouselItem
+									key={testimonial.name}
+									className="md:basis-1/2 lg:basis-1/3 pl-0"
+								>
 									<Card
 										key={testimonial.name}
 										className={cn(
@@ -297,27 +330,35 @@ export default async function App() {
 										<CardHeader className="py-10 px-10">
 											<div className="flex items-center justify-start">
 												{/* Star Rating */}
-												{Array.from({ length: testimonial.rating }).map((_, i) => (
-													<StarIcon
-														// biome-ignore lint/suspicious/noArrayIndexKey: no need
-														key={i}
-														className="w-5 h-5 text-yellow-400 fill-current"
-													/>
-												))}
+												{Array.from({ length: testimonial.rating }).map(
+													(_, i) => (
+														<StarIcon
+															// biome-ignore lint/suspicious/noArrayIndexKey: no need
+															key={i}
+															className="w-5 h-5 text-yellow-400 fill-current"
+														/>
+													),
+												)}
 											</div>
 											<blockquote className="text-xl font-semibold text-foreground mb-4">
 												“{testimonial.quote}”
 											</blockquote>
 										</CardHeader>
 										<CardContent className="px-10 py-0">
-											<p className="text-muted-foreground leading-normal">{testimonial.feedback}</p>
+											<p className="text-muted-foreground leading-normal">
+												{testimonial.feedback}
+											</p>
 										</CardContent>
 										<CardFooter className="flex flex-col px-10 py-10 mt-auto">
 											<Separator className="mb-5 mt-auto" />
 											<div className="w-full flex justify-between items-center">
 												<div className="text-left flex flex-col gap-y-1">
-													<p className="font-bold text-foreground">{testimonial.name}</p>
-													<p className="text-sm text-muted-foreground">{testimonial.title}</p>
+													<p className="font-bold text-foreground">
+														{testimonial.name}
+													</p>
+													<p className="text-sm text-muted-foreground">
+														{testimonial.title}
+													</p>
 												</div>
 												<Avatar>
 													<AvatarImage src={testimonial.image} />
@@ -342,8 +383,8 @@ export default async function App() {
 				<div className="container mx-auto">
 					<div className="text-center mb-12">
 						<h2 className="max-w-2xl mx-auto text-4xl md:text-5xl font-bold leading-tight text-foreground">
-							<HighlightText>Thoughts</HighlightText> on design, business, and indie-hacking on
-							design, business, and indie-hacking
+							<HighlightText>Thoughts</HighlightText> on design, business, and
+							indie-hacking on design, business, and indie-hacking
 						</h2>
 					</div>
 					<div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -362,13 +403,24 @@ export default async function App() {
 									/>
 								</div>
 								<div>
-									<Badge variant="outline" className="inline-flex items-center gap-x-0.5">
-										{post.category === "Review" && <AwardIcon className="w-4 h-4" />}
-										{post.category === "Guide" && <MapIcon className="w-4 h-4" />}
+									<Badge
+										variant="outline"
+										className="inline-flex items-center gap-x-0.5"
+									>
+										{post.category === "Review" && (
+											<AwardIcon className="w-4 h-4" />
+										)}
+										{post.category === "Guide" && (
+											<MapIcon className="w-4 h-4" />
+										)}
 										{post.category}
 									</Badge>
-									<h3 className="text-xl font-bold text-foreground mt-2">{post.title}</h3>
-									<p className="mt-2 text-muted-foreground">{post.description}</p>
+									<h3 className="text-xl font-bold text-foreground mt-2">
+										{post.title}
+									</h3>
+									<p className="mt-2 text-muted-foreground">
+										{post.description}
+									</p>
 									<div className="mt-4 flex justify-start text-sm text-muted-foreground gap-x-4">
 										<div className="flex items-center gap-x-2 flex-nowrap">
 											<CalendarIcon className="w-4 h-4" />

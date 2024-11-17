@@ -9,6 +9,11 @@
 		"ghcr.io/devcontainers/features/node:1": {},
 		"./local-features/next-forge": {},
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": ["biomejs.biome"]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
