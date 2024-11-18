@@ -62,6 +62,11 @@ export default {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			keyframes: {
+				"text-gradient": {
+					to: {
+						backgroundPosition: "200% center",
+					},
+				},
 				"accordion-down": {
 					from: {
 						height: "0",
@@ -91,6 +96,7 @@ export default {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				rainbow: "rainbow var(--speed, 2s) infinite linear",
+				"text-gradient": "text-gradient 1.5s linear infinite",
 			},
 		},
 	},

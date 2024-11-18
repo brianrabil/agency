@@ -4,12 +4,13 @@ import localFont from "next/font/local";
 import type React from "react";
 import "@/app/globals.css";
 import { Container } from "@/components/container";
-// import { Analytics } from "@vercel/analytics/react";
-// import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/footer";
 import { Logo } from "@/components/logo";
 import { Nav, NavLink } from "@/components/nav";
 import { Button } from "@/components/ui/button";
+// import { Analytics } from "@vercel/analytics/react";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 import "./globals.css";
@@ -40,11 +41,11 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<header className="flex items-center h-[96px] border-b">
+				<header className="flex items-center h-[96px]">
 					<Container className="flex justify-between items-center">
 						{/* Left section: Logo */}
-						<div className="text-2xl font-bold text-foreground">
-							<Logo />
+						<div className="text-xl font-bold text-foreground">
+							<Logo className="h-9" />
 						</div>
 
 						{/* Center section: Navigation */}
@@ -58,7 +59,7 @@ export default function RootLayout({
 
 						{/* Right section: Call to Action */}
 						<Button type="button" variant="outline" asChild>
-							<Link href="/contact">Book a call</Link>
+							<Link href="/contact">Free Product Strategy Call</Link>
 						</Button>
 					</Container>
 				</header>
