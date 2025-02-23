@@ -1,4 +1,3 @@
-import Team from "@/public/images/team.jpg";
 import Image from "next/image";
 
 export default function Story() {
@@ -46,7 +45,7 @@ export default function Story() {
 							<figure className="min-w-[240px]">
 								<Image
 									className="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]"
-									src={Team}
+									src="https://placekitten.com/420/280"
 									width={420}
 									height={280}
 									alt="Team"

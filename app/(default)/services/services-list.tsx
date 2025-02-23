@@ -1,12 +1,14 @@
-import ServiceImg01 from "@/public/images/integrations-01.svg"; // Placeholder - replace with UI/UX-specific icons
-import ServiceImg02 from "@/public/images/integrations-02.svg";
-import ServiceImg03 from "@/public/images/integrations-03.svg";
-import ServiceImg04 from "@/public/images/integrations-04.svg";
-import ServiceImg05 from "@/public/images/integrations-05.svg";
-import ServiceImg06 from "@/public/images/integrations-06.svg";
-import ServiceImg07 from "@/public/images/integrations-07.svg";
-import ServiceImg08 from "@/public/images/integrations-08.svg";
 import Star from "@/public/images/star.svg";
+import {
+	BarChart3,
+	Bot,
+	Grid,
+	Layers,
+	Palette,
+	PenTool,
+	Play,
+	TestTube2,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +16,7 @@ export default function ServicesList() {
 	const items = [
 		{
 			id: "ui-ux-design",
-			img: ServiceImg01,
+			icon: Palette,
 			name: "UI/UX Design",
 			description:
 				"Unlimited requests for web, mobile, and app designs—delivered in 24-48 hours with unlimited revisions.",
@@ -24,7 +26,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "prototyping",
-			img: ServiceImg04,
+			icon: Layers,
 			name: "Prototyping & Wireframing",
 			description:
 				"Rapid prototyping and wireframing to bring your ideas to life, refined through iterative feedback.",
@@ -34,7 +36,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "branding",
-			img: ServiceImg05,
+			icon: PenTool,
 			name: "Branding & Graphic Design",
 			description:
 				"Create a cohesive brand identity with logos, illustrations, and graphics—all under one subscription.",
@@ -44,7 +46,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "design-systems",
-			img: ServiceImg06,
+			icon: Grid,
 			name: "Design System Development",
 			description:
 				"Build scalable design systems to ensure consistency across your digital products.",
@@ -54,7 +56,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "user-testing",
-			img: ServiceImg07,
+			icon: TestTube2,
 			name: "User Testing & Research",
 			description:
 				"Validate your designs with user testing and research to optimize usability and engagement.",
@@ -64,7 +66,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "motion-design",
-			img: ServiceImg08,
+			icon: Play,
 			name: "Motion Design & Animation",
 			description:
 				"Enhance your interfaces with custom animations and micro-interactions for a dynamic user experience.",
@@ -74,7 +76,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "ai-chatbots",
-			img: ServiceImg02,
+			icon: Bot,
 			name: "AI-Powered Chatbots",
 			description:
 				"Custom-built chatbots to enhance user engagement, powered by advanced AI for seamless interactions.",
@@ -84,7 +86,7 @@ export default function ServicesList() {
 		},
 		{
 			id: "ai-analytics",
-			img: ServiceImg03,
+			icon: BarChart3,
 			name: "AI Analytics",
 			description:
 				"Leverage predictive analytics and machine learning to gain insights and optimize your business strategy.",
@@ -183,7 +185,7 @@ type CardProps = {
 	item: {
 		id: string;
 		category: string;
-		img: string;
+		icon: React.ElementType;
 		name: string;
 		featured: boolean;
 		link: string;
@@ -192,12 +194,13 @@ type CardProps = {
 };
 
 export function ServiceCard({ item }: CardProps) {
+	const Icon = item.icon;
 	return (
 		<div className="bg-linear-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative">
 			<div className="flex flex-col p-5 h-full">
 				<div className="flex items-center space-x-3 mb-3">
 					<div className="relative">
-						<Image src={item.img} width="40" height="40" alt={item.name} />
+						<Icon className="w-10 h-10 text-slate-200" />
 						{item.featured && (
 							<Image
 								className="absolute top-0 -right-1"
