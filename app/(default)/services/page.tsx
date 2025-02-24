@@ -1,7 +1,12 @@
 export const metadata = {
-	title: "Services - Zendrel",
+	title: "Zendrel | Services",
 	description:
-		"Discover Zendrel’s unlimited UI/UX design and AI-powered solutions tailored to your business needs.",
+		"Expert UI/UX design, Next.js web development, React Native mobile apps, AI integration, and more. Discover our comprehensive range of digital services.",
+	openGraph: {
+		title: "Zendrel | Services",
+		description:
+			"Expert UI/UX design, Next.js web development, React Native mobile apps, AI integration, and more. Discover our comprehensive range of digital services.",
+	},
 };
 
 import ServicesList from "./services-list";

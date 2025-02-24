@@ -4,8 +4,14 @@ import Features from "@/components/features-05";
 import PricingSection from "./pricing-section";
 
 export const metadata = {
-	title: "Pricing - Stellar",
-	description: "Page description",
+	title: "Zendrel | Pricing",
+	description:
+		"Simple, transparent pricing for unlimited design and development services. One flat monthly fee for unlimited requests and two active tasks at a time.",
+	openGraph: {
+		title: "Zendrel | Pricing",
+		description:
+			"Simple, transparent pricing for unlimited design and development services. One flat monthly fee for unlimited requests and two active tasks at a time.",
+	},
 };
 
 export default function Pricing() {

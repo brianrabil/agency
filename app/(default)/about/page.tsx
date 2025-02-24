@@ -3,8 +3,14 @@ import Hero from "@/components/hero-about";
 import Story from "@/components/story";
 
 export const metadata = {
-	title: "About - Stellar",
-	description: "Page description",
+	title: "Zendrel | About",
+	description:
+		"Learn how Zendrel revolutionizes digital product development with unlimited design and development services for startups and established businesses.",
+	openGraph: {
+		title: "Zendrel | About",
+		description:
+			"Learn how Zendrel revolutionizes digital product development with unlimited design and development services for startups and established businesses.",
+	},
 };
 
 export default function About() {

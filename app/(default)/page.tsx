@@ -6,8 +6,14 @@ import Hero from "@/components/hero";
 import Pricing from "./pricing-section";
 
 export const metadata = {
-	title: "Home - Stellar",
-	description: "Page description",
+	title: "Zendrel | Unlimited Design & Development Services",
+	description:
+		"Transform your digital presence with Zendrel's unlimited UI/UX design, Next.js web apps, and React Native mobile development. Launch faster and iterate endlessly.",
+	openGraph: {
+		title: "Unlimited Design & Development Services | Zendrel",
+		description:
+			"Transform your digital presence with Zendrel's unlimited UI/UX design, Next.js web apps, and React Native mobile development. Launch faster and iterate endlessly.",
+	},
 };
 
 export default function Home() {

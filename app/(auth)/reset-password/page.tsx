@@ -1,8 +1,12 @@
 import Logo from "@/components/ui/logo";
 
 export const metadata = {
-	title: "Reset Password - Stellar",
-	description: "Page description",
+	title: "Zendrel | Reset Password",
+	description: "Reset your Zendrel account password securely.",
+	robots: {
+		index: false,
+		follow: false,
+	},
 };
 
 export default function ResetPassword() {

@@ -2,8 +2,13 @@ import Logo from "@/components/ui/logo";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Sign In - Stellar",
-	description: "Page description",
+	title: "Zendrel | Sign In",
+	description:
+		"Sign in to your Zendrel account to manage your design and development requests.",
+	robots: {
+		index: false,
+		follow: false,
+	},
 };
 
 export default function SignIn() {

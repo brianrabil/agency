@@ -2,8 +2,13 @@ import Logo from "@/components/ui/logo";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Sign Up - Stellar",
-	description: "Page description",
+	title: "Zendrel | Sign Up",
+	description:
+		"Start your journey with Zendrel. Get unlimited design and development services under one subscription.",
+	robots: {
+		index: false,
+		follow: false,
+	},
 };
 
 export default function SignUp() {
